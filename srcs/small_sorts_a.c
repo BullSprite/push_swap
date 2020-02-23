@@ -14,7 +14,8 @@
 
 void	small_sort_parts_a1(t_workspace *ws)
 {
-	if (A->num < A_N->num && A->num < A_NN->num)
+	if ((*(ws->a))->num < ((*(ws->a))->next)->num &&
+		(*(ws->a))->num < ((*(ws->a))->next->next)->num)
 	{
 		rotate(ws, 0);
 		swap(ws, 0);
@@ -26,21 +27,25 @@ void	small_sort_parts_a1(t_workspace *ws)
 
 void	small_sort_parts_a(t_workspace *ws)
 {
-	if (A->num > A_N->num && A_N->num > A_NN->num)
+	if ((*(ws->a))->num > ((*(ws->a))->next)->num &&
+		((*(ws->a))->next)->num > ((*(ws->a))->next->next)->num)
 	{
 		swap(ws, 0);
 		small_sort_parts_a(ws);
 	}
-	else if (A->num < A_N->num && A_N->num < A_NN->num)
+	else if ((*(ws->a))->num < ((*(ws->a))->next)->num &&
+			((*(ws->a))->next)->num < ((*(ws->a))->next->next)->num)
 		return ;
-	else if (A->num < A_N->num && A->num > A_NN->num)
+	else if ((*(ws->a))->num < ((*(ws->a))->next)->num &&
+			(*(ws->a))->num > ((*(ws->a))->next->next)->num)
 	{
 		push_to_b(ws, 1);
 		swap(ws, 0);
 		push_to_a(ws, 1);
 		swap(ws, 0);
 	}
-	else if (A->num > A_N->num && A->num > A_NN->num)
+	else if ((*(ws->a))->num > ((*(ws->a))->next)->num &&
+			(*(ws->a))->num > ((*(ws->a))->next->next)->num)
 	{
 		swap(ws, 0);
 		small_sort_parts_a(ws);

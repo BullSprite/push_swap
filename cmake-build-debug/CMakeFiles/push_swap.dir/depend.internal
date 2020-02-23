@@ -212,6 +212,10 @@ CMakeFiles/push_swap.dir/srcs/pushes.c.o
  /Users/swynona/push_swap/includes/./both.h
  /Users/swynona/push_swap/includes/push_swap.h
  /Users/swynona/push_swap/srcs/pushes.c
+CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o
+ /Users/swynona/push_swap/includes/./both.h
+ /Users/swynona/push_swap/includes/push_swap.h
+ /Users/swynona/push_swap/srcs/reverse_rotates.c
 CMakeFiles/push_swap.dir/srcs/rotates.c.o
  /Users/swynona/push_swap/includes/./both.h
  /Users/swynona/push_swap/includes/push_swap.h
@@ -220,6 +224,14 @@ CMakeFiles/push_swap.dir/srcs/small_sorts.c.o
  /Users/swynona/push_swap/includes/./both.h
  /Users/swynona/push_swap/includes/push_swap.h
  /Users/swynona/push_swap/srcs/small_sorts.c
+CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o
+ /Users/swynona/push_swap/includes/./both.h
+ /Users/swynona/push_swap/includes/push_swap.h
+ /Users/swynona/push_swap/srcs/small_sorts_a.c
+CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o
+ /Users/swynona/push_swap/includes/./both.h
+ /Users/swynona/push_swap/includes/push_swap.h
+ /Users/swynona/push_swap/srcs/small_sorts_b.c
 CMakeFiles/push_swap.dir/srcs/sort.c.o
  /Users/swynona/push_swap/includes/./both.h
  /Users/swynona/push_swap/includes/push_swap.h

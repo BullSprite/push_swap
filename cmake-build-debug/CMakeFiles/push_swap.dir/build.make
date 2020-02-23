@@ -1019,6 +1019,45 @@ CMakeFiles/push_swap.dir/srcs/is_sorted.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/srcs/is_sorted.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/swynona/push_swap/srcs/is_sorted.c -o CMakeFiles/push_swap.dir/srcs/is_sorted.c.s
 
+CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o: CMakeFiles/push_swap.dir/flags.make
+CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o: ../srcs/small_sorts_b.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/swynona/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o   -c /Users/swynona/push_swap/srcs/small_sorts_b.c
+
+CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/swynona/push_swap/srcs/small_sorts_b.c > CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.i
+
+CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/swynona/push_swap/srcs/small_sorts_b.c -o CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.s
+
+CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o: CMakeFiles/push_swap.dir/flags.make
+CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o: ../srcs/small_sorts_a.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/swynona/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o   -c /Users/swynona/push_swap/srcs/small_sorts_a.c
+
+CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/swynona/push_swap/srcs/small_sorts_a.c > CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.i
+
+CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/swynona/push_swap/srcs/small_sorts_a.c -o CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.s
+
+CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o: CMakeFiles/push_swap.dir/flags.make
+CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o: ../srcs/reverse_rotates.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/swynona/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o   -c /Users/swynona/push_swap/srcs/reverse_rotates.c
+
+CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/swynona/push_swap/srcs/reverse_rotates.c > CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.i
+
+CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/swynona/push_swap/srcs/reverse_rotates.c -o CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.s
+
 # Object files for target push_swap
 push_swap_OBJECTS = \
 "CMakeFiles/push_swap.dir/srcs/push_swap.c.o" \
@@ -1094,7 +1133,10 @@ push_swap_OBJECTS = \
 "CMakeFiles/push_swap.dir/srcs/sort.c.o" \
 "CMakeFiles/push_swap.dir/srcs/small_sorts.c.o" \
 "CMakeFiles/push_swap.dir/srcs/fill.c.o" \
-"CMakeFiles/push_swap.dir/srcs/is_sorted.c.o"
+"CMakeFiles/push_swap.dir/srcs/is_sorted.c.o" \
+"CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o" \
+"CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o" \
+"CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o"
 
 # External object files for target push_swap
 push_swap_EXTERNAL_OBJECTS =
@@ -1173,9 +1215,12 @@ push_swap: CMakeFiles/push_swap.dir/srcs/sort.c.o
 push_swap: CMakeFiles/push_swap.dir/srcs/small_sorts.c.o
 push_swap: CMakeFiles/push_swap.dir/srcs/fill.c.o
 push_swap: CMakeFiles/push_swap.dir/srcs/is_sorted.c.o
+push_swap: CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o
+push_swap: CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o
+push_swap: CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o
 push_swap: CMakeFiles/push_swap.dir/build.make
 push_swap: CMakeFiles/push_swap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/swynona/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Linking C executable push_swap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/swynona/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Linking C executable push_swap"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/push_swap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

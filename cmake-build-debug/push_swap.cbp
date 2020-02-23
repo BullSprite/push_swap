@@ -293,10 +293,19 @@
 		<Unit filename="/Users/swynona/push_swap/srcs/pushes.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/swynona/push_swap/srcs/reverse_rotates.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/swynona/push_swap/srcs/rotates.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/swynona/push_swap/srcs/small_sorts.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/swynona/push_swap/srcs/small_sorts_a.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/swynona/push_swap/srcs/small_sorts_b.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/swynona/push_swap/srcs/sort.c">

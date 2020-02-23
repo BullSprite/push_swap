@@ -16,12 +16,15 @@ void	small_sort_full_a(t_workspace *ws)
 {
 	while (1)
 	{
-		if (A->num < A_N->num && A_N->num < A_NN->num)
+		if ((*(ws->a))->num < ((*(ws->a))->next)->num &&
+			((*(ws->a))->next)->num < ((*(ws->a))->next->next)->num)
 			return ;
-		else if (A->num < A_N->num && A_N->num > A_NN->num)
+		else if ((*(ws->a))->num < ((*(ws->a))->next)->num &&
+				((*(ws->a))->next)->num > ((*(ws->a))->next->next)->num)
 			reverse_rotate(ws, 0);
-		else if (A->num > A_N->num && A_N->num < A_NN->num &&
-											A->num > A_NN->num)
+		else if ((*(ws->a))->num > ((*(ws->a))->next)->num &&
+				((*(ws->a))->next)->num < ((*(ws->a))->next->next)->num &&
+				(*(ws->a))->num > ((*(ws->a))->next->next)->num)
 			rotate(ws, 0);
 		else
 			swap(ws, 0);
@@ -32,7 +35,7 @@ void	super_small_sort_b(t_workspace *ws, int size)
 {
 	if (size == 2)
 	{
-		if (B->num < B_N->num)
+		if ((*(ws->b))->num < ((*(ws->b))->next)->num)
 			swap(ws, 1);
 		push_to_a(ws, 1);
 	}
@@ -52,7 +55,7 @@ void	small_sort(t_workspace *ws, t_parts info, int name, int size)
 	{
 		if (!name)
 		{
-			if (A->num > A_N->num)
+			if ((*(ws->a))->num > ((*(ws->a))->next)->num)
 				swap(ws, 0);
 		}
 		else

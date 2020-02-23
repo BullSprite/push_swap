@@ -1986,6 +1986,33 @@ srcs/pushes.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/pushes.c.s
 .PHONY : srcs/pushes.c.s
 
+srcs/reverse_rotates.o: srcs/reverse_rotates.c.o
+
+.PHONY : srcs/reverse_rotates.o
+
+# target to build an object file
+srcs/reverse_rotates.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o
+.PHONY : srcs/reverse_rotates.c.o
+
+srcs/reverse_rotates.i: srcs/reverse_rotates.c.i
+
+.PHONY : srcs/reverse_rotates.i
+
+# target to preprocess a source file
+srcs/reverse_rotates.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.i
+.PHONY : srcs/reverse_rotates.c.i
+
+srcs/reverse_rotates.s: srcs/reverse_rotates.c.s
+
+.PHONY : srcs/reverse_rotates.s
+
+# target to generate assembly for a file
+srcs/reverse_rotates.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.s
+.PHONY : srcs/reverse_rotates.c.s
+
 srcs/rotates.o: srcs/rotates.c.o
 
 .PHONY : srcs/rotates.o
@@ -2039,6 +2066,60 @@ srcs/small_sorts.s: srcs/small_sorts.c.s
 srcs/small_sorts.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/small_sorts.c.s
 .PHONY : srcs/small_sorts.c.s
+
+srcs/small_sorts_a.o: srcs/small_sorts_a.c.o
+
+.PHONY : srcs/small_sorts_a.o
+
+# target to build an object file
+srcs/small_sorts_a.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o
+.PHONY : srcs/small_sorts_a.c.o
+
+srcs/small_sorts_a.i: srcs/small_sorts_a.c.i
+
+.PHONY : srcs/small_sorts_a.i
+
+# target to preprocess a source file
+srcs/small_sorts_a.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.i
+.PHONY : srcs/small_sorts_a.c.i
+
+srcs/small_sorts_a.s: srcs/small_sorts_a.c.s
+
+.PHONY : srcs/small_sorts_a.s
+
+# target to generate assembly for a file
+srcs/small_sorts_a.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.s
+.PHONY : srcs/small_sorts_a.c.s
+
+srcs/small_sorts_b.o: srcs/small_sorts_b.c.o
+
+.PHONY : srcs/small_sorts_b.o
+
+# target to build an object file
+srcs/small_sorts_b.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o
+.PHONY : srcs/small_sorts_b.c.o
+
+srcs/small_sorts_b.i: srcs/small_sorts_b.c.i
+
+.PHONY : srcs/small_sorts_b.i
+
+# target to preprocess a source file
+srcs/small_sorts_b.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.i
+.PHONY : srcs/small_sorts_b.c.i
+
+srcs/small_sorts_b.s: srcs/small_sorts_b.c.s
+
+.PHONY : srcs/small_sorts_b.s
+
+# target to generate assembly for a file
+srcs/small_sorts_b.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.s
+.PHONY : srcs/small_sorts_b.c.s
 
 srcs/sort.o: srcs/sort.c.o
 
@@ -2337,12 +2418,21 @@ help:
 	@echo "... srcs/pushes.o"
 	@echo "... srcs/pushes.i"
 	@echo "... srcs/pushes.s"
+	@echo "... srcs/reverse_rotates.o"
+	@echo "... srcs/reverse_rotates.i"
+	@echo "... srcs/reverse_rotates.s"
 	@echo "... srcs/rotates.o"
 	@echo "... srcs/rotates.i"
 	@echo "... srcs/rotates.s"
 	@echo "... srcs/small_sorts.o"
 	@echo "... srcs/small_sorts.i"
 	@echo "... srcs/small_sorts.s"
+	@echo "... srcs/small_sorts_a.o"
+	@echo "... srcs/small_sorts_a.i"
+	@echo "... srcs/small_sorts_a.s"
+	@echo "... srcs/small_sorts_b.o"
+	@echo "... srcs/small_sorts_b.i"
+	@echo "... srcs/small_sorts_b.s"
 	@echo "... srcs/sort.o"
 	@echo "... srcs/sort.i"
 	@echo "... srcs/sort.s"

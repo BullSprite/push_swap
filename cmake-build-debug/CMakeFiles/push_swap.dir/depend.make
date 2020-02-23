@@ -212,6 +212,10 @@ CMakeFiles/push_swap.dir/srcs/pushes.c.o: ../includes/./both.h
 CMakeFiles/push_swap.dir/srcs/pushes.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/srcs/pushes.c.o: ../srcs/pushes.c
 
+CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o: ../includes/./both.h
+CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o: ../srcs/reverse_rotates.c
+
 CMakeFiles/push_swap.dir/srcs/rotates.c.o: ../includes/./both.h
 CMakeFiles/push_swap.dir/srcs/rotates.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/srcs/rotates.c.o: ../srcs/rotates.c
@@ -219,6 +223,14 @@ CMakeFiles/push_swap.dir/srcs/rotates.c.o: ../srcs/rotates.c
 CMakeFiles/push_swap.dir/srcs/small_sorts.c.o: ../includes/./both.h
 CMakeFiles/push_swap.dir/srcs/small_sorts.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/srcs/small_sorts.c.o: ../srcs/small_sorts.c
+
+CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o: ../includes/./both.h
+CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o: ../srcs/small_sorts_a.c
+
+CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o: ../includes/./both.h
+CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o: ../srcs/small_sorts_b.c
 
 CMakeFiles/push_swap.dir/srcs/sort.c.o: ../includes/./both.h
 CMakeFiles/push_swap.dir/srcs/sort.c.o: ../includes/push_swap.h
