@@ -38,5 +38,6 @@ void				push_to_b(t_workspace *ws, int num);
 void				rotate(t_workspace *ws, int name);
 void				reverse_rotate(t_workspace *ws, int name);
 int					is_sorted(t_workspace *ws, int check_b);
-void				error(void);
+void				error(t_workspace *ws);
+void 				clear_stacks(t_workspace *ws);
 #endif
