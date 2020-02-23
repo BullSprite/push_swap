@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/push_swap.h"
 
-int 	find_pivot(t_stack **st, int size)
+int		find_pivot(t_stack **st, int size)
 {
 	t_stack	*tmp;
-	int 	*arr;
-	int 	i;
-	int 	j;
+	int		*arr;
+	int		i;
+	int		j;
 
 	arr = (int *)ft_memalloc((size) * sizeof(int));
 	tmp = *st;
@@ -81,7 +80,7 @@ int		something_to_drop(t_stack **st_n, int name, int len, int pivot)
 	return (0);
 }
 
-void drop(t_workspace *ws, int len , int name, int pivot)
+void	drop(t_workspace *ws, int len, int name, int pivot)
 {
 	int rot_count;
 	int i;
@@ -95,9 +94,9 @@ void drop(t_workspace *ws, int len , int name, int pivot)
 		if (!name ? (*(ws->a))->num <= pivot : (*(ws->b))->num >= pivot)
 		{
 			if (!name)
-				push_to_b(ws);
+				push_to_b(ws, 1);
 			else
-				push_to_a(ws);
+				push_to_a(ws, 1);
 			if (!something_to_drop((!name ? ws->a : ws->b), name, len - i,
 					pivot))
 				break ;
@@ -113,13 +112,13 @@ void drop(t_workspace *ws, int len , int name, int pivot)
 void	sort(t_workspace *ws, t_parts info, int name)
 {
 	t_parts	info_next;
-	int size;
-	t_list *dr;
+	int		size;
+	t_list	*dr;
 
 	if (is_sorted(ws, 1))
 		return ;
 	if (!name && (*(ws->b) != 0 ? (info_next.is_parted_b = 1) :
-				  (info_next.is_parted_b = 0)))
+				(info_next.is_parted_b = 0)))
 		info_next.next_part_b = (*(ws->b))->num;
 	else if (name && (info_next.is_parted_a = 1))
 		info_next.next_part_a = (*(ws->a))->num;

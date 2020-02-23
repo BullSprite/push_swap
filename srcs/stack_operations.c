@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/push_swap.h"
 
-int push(t_stack **st, int value)
+int	push(t_stack **st, int value)
 {
 	t_stack *tmp;
+
 	if (*st == 0)
 	{
 		if (!(*st = (t_stack *)ft_memalloc(sizeof(t_stack))))
@@ -34,7 +34,7 @@ int push(t_stack **st, int value)
 	return (1);
 }
 
-int pop(t_stack **st)
+int	pop(t_stack **st)
 {
 	int		ret;
 	t_stack	*tmp;
@@ -44,6 +44,6 @@ int pop(t_stack **st)
 	ret = (*st)->num;
 	tmp = *st;
 	*st = (*st)->next;
-	free (tmp);
+	free(tmp);
 	return (ret);
 }

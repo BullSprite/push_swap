@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-int 	is_sorted(t_workspace *ws, int check_b)
+int		is_sorted(t_workspace *ws, int check_b)
 {
 	int		old;
 	t_stack	*iter;

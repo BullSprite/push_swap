@@ -41,9 +41,9 @@ int	main(int argc, char **argv)
 		else if (!ft_strcmp("ss", line))
 			swap(ws, 2);
 		else if (!ft_strcmp("pa", line))
-			push_to_a(ws);
+			push_to_a(ws, 1);
 		else if (!ft_strcmp("pb", line))
-			push_to_b(ws);
+			push_to_b(ws, 1);
 		else if (!ft_strcmp("ra", line))
 			rotate(ws, 0);
 		else if (!ft_strcmp("rb", line))

@@ -10,20 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/both.h"
 
-void	error()
+void	error(void)
 {
 	ft_putstr_fd("Error\n", 2);
-	exit (0);
+	exit(0);
 }
 
-void fill(t_stack **a, int ac, char **av, int debug)
+void	fill(t_stack **a, int ac, char **av, int debug)
 {
 	int		i;
 	int		j;
-	int 	k;
+	int		k;
 	char	**st;
 
 	*a = 0;
@@ -43,4 +42,3 @@ void fill(t_stack **a, int ac, char **av, int debug)
 		free(st);
 	}
 }
-

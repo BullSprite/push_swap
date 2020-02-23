@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/checker.h"
 
 int		max_idx(t_stack **a, t_stack **b)
@@ -26,7 +25,7 @@ int		max_idx(t_stack **a, t_stack **b)
 		top_b = -1;
 	else
 		top_b = (*b)->idx;
-	return top_a > top_b ? top_a : top_b;
+	return (top_a > top_b ? top_a : top_b);
 }
 
 void	print_work_space(t_workspace *ws)
@@ -54,7 +53,7 @@ void	print_work_space(t_workspace *ws)
 	ft_putstr("_\t_\na\tb\n");
 }
 
-void print_operations(t_workspace *ws)
+void	print_operations(t_workspace *ws)
 {
 	t_list	*op;
 	t_list	*tmp;
@@ -95,8 +94,7 @@ void	optimize_operations(t_list **ops)
 	char	*top;
 	char	*topp;
 
-	op = *ops;
-	if (!op || !(op->next))
+	if (!(op = *ops) || !(op->next))
 		return ;
 	while (op && op->next && op->next->next)
 	{
@@ -108,11 +106,8 @@ void	optimize_operations(t_list **ops)
 				(top[2] == 'b' && ft_strequ("rb", topp)))
 				delete_operations(&op);
 		}
-		else if (top[0] == 'p' && topp[0] == 'p')
-		{
-			if (top[1] != topp[1])
-				delete_operations(&op);
-		}
+		else if (top[0] == 'p' && topp[0] == 'p' && top[1] != topp[1])
+			delete_operations(&op);
 		else if (top[0] == 'r' && topp[0] == 'r')
 			if (ft_strlen(topp) == 3 && top[1] == topp[2])
 				delete_operations(&op);

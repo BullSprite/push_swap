@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/push_swap.h"
 
-void	push_to_a(t_workspace *ws)
+void	push_a(t_workspace *ws)
 {
 	if (P_S)
 		ft_lstaddend(&(ws->op), ft_lstnew("pa", sizeof(char *)));
@@ -21,10 +20,22 @@ void	push_to_a(t_workspace *ws)
 		push(ws->a, pop(ws->b));
 }
 
-void	push_to_b(t_workspace *ws)
+void	push_to_a(t_workspace *ws, int num)
+{
+	while (num--)
+		push_a(ws);
+}
+
+void	push_b(t_workspace *ws)
 {
 	if (P_S)
 		ft_lstaddend(&(ws->op), ft_lstnew("pb", sizeof(char *)));
 	if ((ws->a))
 		push(ws->b, pop(ws->a));
+}
+
+void	push_to_b(t_workspace *ws, int num)
+{
+	while (num--)
+		push_b(ws);
 }
