@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/push_swap.dir/srcs/push_swap.c.o"
+  "CMakeFiles/push_swap.dir/srcs/stack_operations.c.o"
   "CMakeFiles/push_swap.dir/libft/ft_atoi.c.o"
   "CMakeFiles/push_swap.dir/libft/ft_bzero.c.o"
   "CMakeFiles/push_swap.dir/libft/ft_isalnum.c.o"
@@ -63,17 +65,16 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/libft/ft_tolower.c.o"
   "CMakeFiles/push_swap.dir/libft/ft_toupper.c.o"
   "CMakeFiles/push_swap.dir/libft/get_next_line.c.o"
-  "CMakeFiles/push_swap.dir/srcs/fill.c.o"
-  "CMakeFiles/push_swap.dir/srcs/print.c.o"
-  "CMakeFiles/push_swap.dir/srcs/push_swap.c.o"
+  "CMakeFiles/push_swap.dir/srcs/swaps.c.o"
   "CMakeFiles/push_swap.dir/srcs/pushes.c.o"
   "CMakeFiles/push_swap.dir/srcs/rotates.c.o"
-  "CMakeFiles/push_swap.dir/srcs/small_sorts.c.o"
+  "CMakeFiles/push_swap.dir/srcs/print.c.o"
   "CMakeFiles/push_swap.dir/srcs/sort.c.o"
-  "CMakeFiles/push_swap.dir/srcs/stack_operations.c.o"
-  "CMakeFiles/push_swap.dir/srcs/swaps.c.o"
-  "push_swap"
+  "CMakeFiles/push_swap.dir/srcs/small_sorts.c.o"
+  "CMakeFiles/push_swap.dir/srcs/fill.c.o"
+  "CMakeFiles/push_swap.dir/srcs/is_sorted.c.o"
   "push_swap.pdb"
+  "push_swap"
 )
 
 # Per-language clean rules from dependency scanning.

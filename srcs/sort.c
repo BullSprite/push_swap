@@ -1,23 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: swynona <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/23 19:13:55 by swynona           #+#    #+#             */
+/*   Updated: 2020/02/23 19:13:55 by swynona          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "../includes/push_swap.h"
-
-int 	find_pivot1(t_stack **st, int size)
-{
-	int 	sum;
-	int 	count;
-	t_stack	*tmp;
-
-	sum = 0;
-	count = 0;
-	tmp = *st;
-	while (count++ < size)
-	{
-		sum += tmp->num;
-		tmp = tmp->next;
-	}
-	return (sum / size);
-}
-
-#include <stdio.h>
 
 int 	find_pivot(t_stack **st, int size)
 {
@@ -25,7 +19,6 @@ int 	find_pivot(t_stack **st, int size)
 	int 	*arr;
 	int 	i;
 	int 	j;
-	int		sw;
 
 	arr = (int *)ft_memalloc((size) * sizeof(int));
 	tmp = *st;
@@ -40,9 +33,9 @@ int 	find_pivot(t_stack **st, int size)
 		while (++j < size)
 			if (arr[i] > arr[j])
 			{
-				sw = arr[i];
-				arr[i] = arr[j];
-				arr[j] = sw;
+				arr[i] = arr[i] ^ arr[j];
+				arr[j] = arr[i] ^ arr[j];
+				arr[i] = arr[i] ^ arr[j];
 			}
 	i = arr[size / 2];
 	free(arr);
@@ -88,8 +81,6 @@ int		something_to_drop(t_stack **st_n, int name, int len, int pivot)
 	return (0);
 }
 
-//name - from what we drops
-
 void drop(t_workspace *ws, int len , int name, int pivot)
 {
 	int rot_count;
@@ -119,113 +110,6 @@ void drop(t_workspace *ws, int len , int name, int pivot)
 			reverse_rotate(ws, name);
 }
 
-void	sort1(t_workspace *ws, t_parts info, int name)
-{
-	int		pivot;
-	t_parts	info_next;
-	int size;
-
-	if (!name)
-	{
-		if (*(ws->b) != 0)
-		{
-			info_next.is_parted_b = 1;
-			info_next.next_part_b = (*(ws->b))->num;
-		} else
-			info_next.is_parted_b = 0;
-	}
-	else
-	{
-		if (!(*(ws->b)))
-			return ;
-		info_next.is_parted_a = 1;
-		info_next.next_part_a = (*(ws->a))->num;
-	}
-	if ((size = part_length(ws, info, name)) <= 3)
-	{
-		small_sort(ws, info, name, size);
-		return ;
-	}
-	pivot = find_pivot(!name ? ws->a : ws->b, size);
-	drop(ws, size, name, pivot);
-	if (!name)
-	{
-		sort(ws, info, name);
-		info_next.is_parted_a = 1;
-		info_next.next_part_a = (*(ws->a))->num;
-		sort(ws, info_next, !name);
-	}
-	else
-	{
-		sort(ws, info, !name);
-		if (!(*(ws->b)))
-			return ;
-		info_next.is_parted_b = 1;
-		info_next.next_part_b = (*(ws->b))->num;
-		info_next.is_parted_a = 1;
-		info_next.next_part_a = (*(ws->a))->num;
-		sort(ws, info_next, name);
-	}
-}
-
-int 	is_sorted(t_workspace *ws, int check_b)
-{
-	int		old;
-	t_stack	*iter;
-
-	if (check_b)
-	{
-		if ((*(ws->b)))
-			return (0);
-	}
-	iter = *(ws->a);
-	old = iter->num;
-	iter = iter->next;
-	while (iter)
-	{
-		if (old > iter->num)
-			break ;
-		old = iter->num;
-		iter = iter->next;
-	}
-	return (!iter);
-}
-
-t_list	*elements_to_drop(t_stack **st, int pivot, int name)
-{
-	t_list	*res;
-	t_list	*tmpi;
-	t_list	*tmpj;
-	int		*tmpp;
-	t_stack	*tmp;
-
-	tmp = (*st)->next;
-	res = ft_lstnew((*st)->num, sizeof(int));
-	while (tmp)
-	{
-		if (!name ? tmp->num <= pivot : tmp->num >= pivot)
-			ft_lstadd(&res, ft_lstnew(tmp->num, sizeof(int)));
-		tmp = tmp->next;
-	}
-	tmpi = *(&res);
-	while(tmpi)
-	{
-		tmpj = tmpi->next;
-		while (tmpj)
-		{
-			if (!name ? (int)tmpi->content >= (int)tmpj->content :
-				(int)tmpi->content <= (int)tmpj->content)
-			{
-				tmpp = (int)tmpi->content;
-				tmpi->content = tmpj->content;
-				tmpj->content = (void *)tmpp;
-			}
-			tmpj = tmpj->next;
-		}
-		tmpi = tmpi->next;
-	}
-}
-
 void	sort(t_workspace *ws, t_parts info, int name)
 {
 	t_parts	info_next;
@@ -234,8 +118,6 @@ void	sort(t_workspace *ws, t_parts info, int name)
 
 	if (is_sorted(ws, 1))
 		return ;
-	/*if (name && (*(ws->b))->num == 19)
-		printf("nice");*/
 	if (!name && (*(ws->b) != 0 ? (info_next.is_parted_b = 1) :
 				  (info_next.is_parted_b = 0)))
 		info_next.next_part_b = (*(ws->b))->num;
@@ -246,20 +128,13 @@ void	sort(t_workspace *ws, t_parts info, int name)
 		small_sort(ws, info, name, size);
 		return ;
 	}
-	int p = find_pivot(!name ? ws->a : ws->b, size);
-	drop(ws, size, name, p);
-	if (name)
-	{
-		info_next.is_parted_b = 1;
+	drop(ws, size, name, find_pivot(!name ? ws->a : ws->b, size));
+	if (name && (info_next.is_parted_b = 1))
 		info_next.next_part_b = *(ws->b) ? (*(ws->b))->num : 0;
-	}
-	sort(ws, info, 0);
-	info_next.is_parted_a = 1;
+	sort(ws, info, (info_next.is_parted_a = 1) - 1);
 	info_next.next_part_a = (*(ws->a))->num;
-	if (name && (*(ws->b))->num == info_next.next_part_b)
-	{
-		info_next.is_parted_b = info.is_parted_b;
+	if (name && (*(ws->b))->num == info_next.next_part_b &&
+	(info_next.is_parted_b = info.is_parted_b))
 		info_next.next_part_b = info.next_part_b;
-	}
 	sort(ws, info_next, 1);
 }

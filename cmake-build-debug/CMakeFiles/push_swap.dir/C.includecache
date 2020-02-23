@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/bullsprite/CLionProjects/push_swap/includes/both.h
+/Users/swynona/push_swap/includes/both.h
 ../libft/libft.h
-/home/bullsprite/CLionProjects/push_swap/libft/libft.h
+/Users/swynona/push_swap/libft/libft.h
 
-/home/bullsprite/CLionProjects/push_swap/includes/push_swap.h
-./both.h
-/home/bullsprite/CLionProjects/push_swap/includes/both.h
-
-/home/bullsprite/CLionProjects/push_swap/libft/libft.h
+/Users/swynona/push_swap/libft/libft.h
 string.h
 -
 stdlib.h
@@ -28,9 +24,7 @@ sys/types.h
 sys/uio.h
 -
 
-/home/bullsprite/CLionProjects/push_swap/srcs/sort.c
-../includes/push_swap.h
-/home/bullsprite/CLionProjects/push_swap/includes/push_swap.h
-stdio.h
--
+/Users/swynona/push_swap/srcs/fill.c
+../includes/both.h
+/Users/swynona/push_swap/includes/both.h
 

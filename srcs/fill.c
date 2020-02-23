@@ -1,29 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fill.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: swynona <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/23 19:12:59 by swynona           #+#    #+#             */
+/*   Updated: 2020/02/23 19:13:00 by swynona          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "../includes/both.h"
 
-void fill(t_stack **a, int ac, char **av)
+void	error()
 {
-	int 	i;
-	char **st;
+	ft_putstr_fd("Error\n", 2);
+	exit (0);
+}
+
+void fill(t_stack **a, int ac, char **av, int debug)
+{
+	int		i;
+	int		j;
+	int 	k;
+	char	**st;
 
 	*a = 0;
 	i = 0;
-	if (ac == 2)
+	while (++i < ac - debug)
 	{
-		st = ft_strsplit(av[1], ' ');
-		ac = 0;
-		i = 0;
-		while (st[++i])
-			ac++;
-		i = -1;
-		while (++i <= ac)
+		st = ft_strsplit(av[ac - i], ' ');
+		k = 0;
+		while (st[k])
+			k++;
+		j = 0;
+		while (++j <= k)
 		{
-			push(a, ft_atoi(st[ac - i]));
+			push(a, ft_atoi(st[k - j]));
+			free(st[k - j]);
 		}
+		free(st);
 	}
-	else
-		while (++i < ac)
-		{
-			push(a, ft_atoi(av[ac - i]));
-		}
 }
 

@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: swynona <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/23 19:12:15 by swynona           #+#    #+#             */
+/*   Updated: 2020/02/23 19:12:15 by swynona          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -16,5 +29,4 @@ void	sort(t_workspace *ws, t_parts info, int name);
 void	small_sort(t_workspace *ws, t_parts info, int name, int size);
 void	print_operations(t_workspace *ws);
 void	optimize_operations(t_list **ops);
-//void	optimize_operations(t_workspace *ws);
 #endif //PUSH_SWAP_H
