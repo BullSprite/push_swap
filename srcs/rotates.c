@@ -39,9 +39,9 @@ void	rotate_both(t_workspace *ws)
 	rotate_one(ws->b);
 }
 
-void	rotate(t_workspace *ws, int name)
+void	rotate(t_workspace *ws, int name, int p_s)
 {
-	if (P_S)
+	if (p_s)
 	{
 		if (name == 0)
 			ft_lstaddend(&(ws->op), ft_lstnew("ra", sizeof(char *)));

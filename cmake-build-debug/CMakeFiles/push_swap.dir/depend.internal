@@ -192,6 +192,10 @@ CMakeFiles/push_swap.dir/libft/ft_toupper.c.o
 CMakeFiles/push_swap.dir/libft/get_next_line.c.o
  /Users/swynona/push_swap/libft/get_next_line.c
  /Users/swynona/push_swap/libft/libft.h
+CMakeFiles/push_swap.dir/srcs/errors.c.o
+ /Users/swynona/push_swap/includes/both.h
+ /Users/swynona/push_swap/libft/libft.h
+ /Users/swynona/push_swap/srcs/errors.c
 CMakeFiles/push_swap.dir/srcs/fill.c.o
  /Users/swynona/push_swap/includes/both.h
  /Users/swynona/push_swap/libft/libft.h
@@ -209,8 +213,8 @@ CMakeFiles/push_swap.dir/srcs/push_swap.c.o
  /Users/swynona/push_swap/includes/push_swap.h
  /Users/swynona/push_swap/srcs/push_swap.c
 CMakeFiles/push_swap.dir/srcs/pushes.c.o
- /Users/swynona/push_swap/includes/./both.h
- /Users/swynona/push_swap/includes/push_swap.h
+ /Users/swynona/push_swap/includes/both.h
+ /Users/swynona/push_swap/libft/libft.h
  /Users/swynona/push_swap/srcs/pushes.c
 CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o
  /Users/swynona/push_swap/includes/./both.h

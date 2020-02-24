@@ -94,19 +94,19 @@ void	drop(t_workspace *ws, int len, int name, int pivot)
 		if (!name ? (*(ws->a))->num < pivot : (*(ws->b))->num >= pivot)
 		{
 			if (!name)
-				push_to_b(ws, 1);
+				push_to_b(ws, 1, 1);
 			else
-				push_to_a(ws, 1);
+				push_to_a(ws, 1, 1);
 			if (!something_to_drop((!name ? ws->a : ws->b), name, len - i,
 					pivot))
 				break ;
 		}
 		else if (++rot_count)
-			rotate(ws, name);
+			rotate(ws, name, 1);
 	}
 	if (info)
 		while (rot_count--)
-			reverse_rotate(ws, name);
+			reverse_rotate(ws, name, 1);
 }
 
 void	sort(t_workspace *ws, t_parts info, int name)

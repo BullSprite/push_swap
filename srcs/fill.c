@@ -21,9 +21,9 @@ int 	is_correct(char *s)
 
 	i = 0;
 	sign = 0;
-	if (s[0] == '+' || (s[0] == '-' && (sign = 1)))
+	if ((s[0] == '+' || s[0] == '-') && (sign = 1))
 		i++;
-	len = ft_strlen(s) - i > 10;
+	len = ft_strlen(s) - i;
 	if (len < 1 || len > 10)
 		return (0);
 	while (s[i])
@@ -31,8 +31,10 @@ int 	is_correct(char *s)
 			return (0);
 	if (len == 10)
 	{
+		if (s[sign] > '2')
+			return (0);
 		num = ft_atoi(s);
-		if ((sign && num > 0) || (!sign && num < 0))
+		if ((s[0] == '-' && num >= 0) || (s[0] != '-' && num <= 0))
 			return (0);
 	}
 	return (1);
@@ -70,7 +72,7 @@ void	fill(t_workspace *ws, int ac, char **av, int debug)
 		j = 0;
 		while (++j <= k)
 		{
-			if (is_correct(st[k - j]) && !is_unic(ws->a, ft_atoi(st[k -
+			if (!is_correct(st[k - j]) || !is_unic(ws->a, ft_atoi(st[k -
 			j])))
 			{
 				while (j <= k)

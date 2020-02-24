@@ -1851,6 +1851,33 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
+srcs/errors.o: srcs/errors.c.o
+
+.PHONY : srcs/errors.o
+
+# target to build an object file
+srcs/errors.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/errors.c.o
+.PHONY : srcs/errors.c.o
+
+srcs/errors.i: srcs/errors.c.i
+
+.PHONY : srcs/errors.i
+
+# target to preprocess a source file
+srcs/errors.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/errors.c.i
+.PHONY : srcs/errors.c.i
+
+srcs/errors.s: srcs/errors.c.s
+
+.PHONY : srcs/errors.s
+
+# target to generate assembly for a file
+srcs/errors.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/errors.c.s
+.PHONY : srcs/errors.c.s
+
 srcs/fill.o: srcs/fill.c.o
 
 .PHONY : srcs/fill.o
@@ -2403,6 +2430,9 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
+	@echo "... srcs/errors.o"
+	@echo "... srcs/errors.i"
+	@echo "... srcs/errors.s"
 	@echo "... srcs/fill.o"
 	@echo "... srcs/fill.i"
 	@echo "... srcs/fill.s"

@@ -68,6 +68,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/swynona/push_swap/libft/ft_tolower.c" "/Users/swynona/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_tolower.c.o"
   "/Users/swynona/push_swap/libft/ft_toupper.c" "/Users/swynona/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_toupper.c.o"
   "/Users/swynona/push_swap/libft/get_next_line.c" "/Users/swynona/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/get_next_line.c.o"
+  "/Users/swynona/push_swap/srcs/errors.c" "/Users/swynona/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/srcs/errors.c.o"
   "/Users/swynona/push_swap/srcs/fill.c" "/Users/swynona/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/srcs/fill.c.o"
   "/Users/swynona/push_swap/srcs/is_sorted.c" "/Users/swynona/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/srcs/is_sorted.c.o"
   "/Users/swynona/push_swap/srcs/print.c" "/Users/swynona/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/srcs/print.c.o"

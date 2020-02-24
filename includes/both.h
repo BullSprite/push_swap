@@ -32,11 +32,11 @@ typedef struct		s_workspace
 void				fill(t_workspace *ws, int ac, char **av, int debug);
 int					push(t_stack **st, int value);
 int					pop(t_stack **st);
-void				swap(t_workspace *ws, int name);
-void				push_to_a(t_workspace *ws, int num);
-void				push_to_b(t_workspace *ws, int num);
-void				rotate(t_workspace *ws, int name);
-void				reverse_rotate(t_workspace *ws, int name);
+void				swap(t_workspace *ws, int name, int p_s);
+void				push_to_a(t_workspace *ws, int num, int p_s);
+void				push_to_b(t_workspace *ws, int num, int p_s);
+void				rotate(t_workspace *ws, int name, int p_s);
+void				reverse_rotate(t_workspace *ws, int name, int p_s);
 int					is_sorted(t_workspace *ws, int check_b);
 void				error(t_workspace *ws);
 void 				clear_stacks(t_workspace *ws);

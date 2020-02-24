@@ -32,9 +32,9 @@ void	swap_both(t_workspace *ws)
 	swap_one(ws->b);
 }
 
-void	swap(t_workspace *ws, int name)
+void	swap(t_workspace *ws, int name, int p_s)
 {
-	if (P_S)
+	if (p_s)
 	{
 		if (name == 0)
 			ft_lstaddend(&(ws->op), ft_lstnew("sa", sizeof(char *)));

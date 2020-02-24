@@ -76,6 +76,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/srcs/small_sorts_b.c.o"
   "CMakeFiles/push_swap.dir/srcs/small_sorts_a.c.o"
   "CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o"
+  "CMakeFiles/push_swap.dir/srcs/errors.c.o"
   "push_swap.pdb"
   "push_swap"
 )

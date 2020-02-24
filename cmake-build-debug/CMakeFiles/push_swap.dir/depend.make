@@ -192,6 +192,10 @@ CMakeFiles/push_swap.dir/libft/ft_toupper.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
 CMakeFiles/push_swap.dir/libft/get_next_line.c.o: ../libft/libft.h
 
+CMakeFiles/push_swap.dir/srcs/errors.c.o: ../includes/both.h
+CMakeFiles/push_swap.dir/srcs/errors.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/srcs/errors.c.o: ../srcs/errors.c
+
 CMakeFiles/push_swap.dir/srcs/fill.c.o: ../includes/both.h
 CMakeFiles/push_swap.dir/srcs/fill.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/srcs/fill.c.o: ../srcs/fill.c
@@ -208,8 +212,8 @@ CMakeFiles/push_swap.dir/srcs/push_swap.c.o: ../includes/./both.h
 CMakeFiles/push_swap.dir/srcs/push_swap.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/srcs/push_swap.c.o: ../srcs/push_swap.c
 
-CMakeFiles/push_swap.dir/srcs/pushes.c.o: ../includes/./both.h
-CMakeFiles/push_swap.dir/srcs/pushes.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/srcs/pushes.c.o: ../includes/both.h
+CMakeFiles/push_swap.dir/srcs/pushes.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/srcs/pushes.c.o: ../srcs/pushes.c
 
 CMakeFiles/push_swap.dir/srcs/reverse_rotates.c.o: ../includes/./both.h

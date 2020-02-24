@@ -278,6 +278,9 @@
 		<Unit filename="/Users/swynona/push_swap/libft/libft.h">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/swynona/push_swap/srcs/errors.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/swynona/push_swap/srcs/fill.c">
 			<Option target="push_swap"/>
 		</Unit>

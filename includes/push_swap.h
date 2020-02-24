@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include "./both.h"
-# define P_S		1
 
 typedef	struct		s_parts
 {
