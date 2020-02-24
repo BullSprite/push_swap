@@ -29,7 +29,7 @@ typedef struct		s_workspace
 	t_list			*op;
 }					t_workspace;
 
-void				fill(t_stack **a, int ac, char **av, int debug);
+void				fill(t_workspace *ws, int ac, char **av, int debug);
 int					push(t_stack **st, int value);
 int					pop(t_stack **st);
 void				swap(t_workspace *ws, int name);

@@ -18,18 +18,19 @@ int	main(int argc, char **argv)
 	char 		*line;
 	int			debug;
 
-	if (argc < 2)
-		error();
-
-	if (!(debug = 0) && !ft_strcmp("-v", argv[1]))
-		debug = 1;
 	if (!(ws = (t_workspace *)ft_memalloc(sizeof(t_workspace))))
 		return (1);
 	if (!(ws->a = (t_stack **)ft_memalloc(sizeof(t_stack *))))
 		return (1);
 	if (!(ws->b = (t_stack **)ft_memalloc(sizeof(t_stack *))))
 		return (1);
-	fill(ws->a, argc, argv, debug);
+
+	if (argc < 2)
+		error(ws);
+
+	if (!(debug = 0) && !ft_strcmp("-v", argv[1]))
+		debug = 1;
+	fill(ws, argc, argv, debug);
 	if (debug)
 		print_work_space(ws);
 	while (get_next_line(0, &line))

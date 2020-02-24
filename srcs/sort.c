@@ -113,7 +113,6 @@ void	sort(t_workspace *ws, t_parts info, int name)
 {
 	t_parts	info_next;
 	int		size;
-	t_list	*dr;
 
 	if (is_sorted(ws, 1))
 		return ;

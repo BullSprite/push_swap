@@ -14,11 +14,12 @@
 
 void	clear_stacks(t_workspace *ws)
 {
-	if (ws)
+	/*if (ws)
 	{
 		if (ws->a)
 
-	}
+	}*/
+	ws = 0;
 }
 
 void	error(t_workspace *ws)
@@ -42,14 +43,14 @@ int		is_unic(t_stack **a, int num)
 	return (1);
 }
 
-void	fill(t_stack **a, int ac, char **av, int debug)
+void	fill(t_workspace *ws, int ac, char **av, int debug)
 {
 	int		i;
 	int		j;
 	int		k;
 	char	**st;
 
-	*a = 0;
+	*(ws->a) = 0;
 	i = 0;
 	while (++i < ac - debug)
 	{
@@ -60,14 +61,14 @@ void	fill(t_stack **a, int ac, char **av, int debug)
 		j = 0;
 		while (++j <= k)
 		{
-			if (!is_unic(a, st[k - j]))
+			if (!is_unic(ws->a, ft_atoi(st[k - j])))
 			{
 				while (j <= k)
 					free(st[k - j++]);
 				free(st);
-				error();
+				error(ws);
 			}
-			push(a, ft_atoi(st[k - j]));
+			push(ws->a, ft_atoi(st[k - j]));
 			free(st[k - j]);
 		}
 		free(st);

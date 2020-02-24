@@ -40,14 +40,16 @@ void	print_work_space(t_workspace *ws)
 	while (height-- > -1)
 	{
 		if (a && a->idx == height + 1)
-			ft_putnbr(a->num + (a->next) - (a = a->next));
+			ft_putnbr(a->num);
 		else
 			ft_putchar(' ');
+		a = ((a && a->idx == height + 1) ? a = a->next : a);
 		ft_putchar('\t');
 		if (b && b->idx == height + 1)
-			ft_putnbr(b->num + (b->next) - (b = b->next));
+			ft_putnbr(b->num);
 		else
 			ft_putchar(' ');
+		b = ((b && b->idx == height + 1) ? b = b->next : b);
 		ft_putchar('\n');
 	}
 	ft_putstr("_\t_\na\tb\n");
