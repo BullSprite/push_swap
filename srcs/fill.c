@@ -12,21 +12,30 @@
 
 #include "../includes/both.h"
 
-void	clear_stacks(t_workspace *ws)
+int 	is_correct(char *s)
 {
-	/*if (ws)
+	int i;
+	int len;
+	int sign;
+	int	num;
+
+	i = 0;
+	sign = 0;
+	if (s[0] == '+' || (s[0] == '-' && (sign = 1)))
+		i++;
+	len = ft_strlen(s) - i > 10;
+	if (len < 1 || len > 10)
+		return (0);
+	while (s[i])
+		if (!ft_isdigit(s[i++]))
+			return (0);
+	if (len == 10)
 	{
-		if (ws->a)
-
-	}*/
-	ws = 0;
-}
-
-void	error(t_workspace *ws)
-{
-	ft_putstr_fd("Error\n", 2);
-	clear_stacks(ws);
-	exit(0);
+		num = ft_atoi(s);
+		if ((sign && num > 0) || (!sign && num < 0))
+			return (0);
+	}
+	return (1);
 }
 
 int		is_unic(t_stack **a, int num)
@@ -61,7 +70,8 @@ void	fill(t_workspace *ws, int ac, char **av, int debug)
 		j = 0;
 		while (++j <= k)
 		{
-			if (!is_unic(ws->a, ft_atoi(st[k - j])))
+			if (is_correct(st[k - j]) && !is_unic(ws->a, ft_atoi(st[k -
+			j])))
 			{
 				while (j <= k)
 					free(st[k - j++]);

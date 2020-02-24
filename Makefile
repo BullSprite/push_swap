@@ -23,7 +23,7 @@ FILES1 = $(addprefix $(SRCS_PATH), checker.c)
 
 FILES3 = $(addprefix $(SRCS_PATH), fill.c is_sorted.c print.c pushes.c \
 		reverse_rotates.c rotates.c stack_operations.c \
-		swaps.c)
+		swaps.c errors.c)
 
 OBJ1 = $(patsubst %.c, %.o, $(FILES1))
 OBJ2 = $(patsubst %.c, %.o, $(FILES2))

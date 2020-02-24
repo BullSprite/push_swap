@@ -31,5 +31,6 @@ int	main(int argc, char **argv)
 	sort(ws, info, 0);
 	optimize_operations(&(ws->op));
 	print_operations(ws);
+	clear_stacks(ws);
 	return (0);
 }
