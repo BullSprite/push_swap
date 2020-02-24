@@ -1,27 +1,43 @@
+#******************************************************************************#
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: swynona <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/02/24 14:34:53 by swynona           #+#    #+#              #
+#    Updated: 2020/02/24 14:34:53 by swynona          ###   ########.fr        #
+#                                                                              #
+#******************************************************************************#
 
 NAME2 = push_swap
 NAME1 = checker
-LIBFT = ./libft/libft.a
-FILES2 = srcs/push_swap.c srcs/small_sorts.c srcs/small_sorts_a.c \
-		srcs/small_sorts_b.c srcs/sort.c
+LIBFT_PATH = ./libft/
+SRCS_PATH = ./srcs/
+INCLUDES_PATH=./includes/
+LIBFT = $(addprefix $(LIBFT_PATH), libft.a)
+FILES2 =$(addprefix $(SRCS_PATH), push_swap.c small_sorts.c small_sorts_a.c \
+		small_sorts_b.c sort.c)
 
-FILES1 = srcs/checker.c
+FILES1 = $(addprefix $(SRCS_PATH), checker.c)
 
-FILES3 = srcs/fill.c srcs/is_sorted.c srcs/print.c srcs/pushes.c \
-		srcs/reverse_rotates.c srcs/rotates.c srcs/stack_operations.c \
-		srcs/swaps.c
+FILES3 = $(addprefix $(SRCS_PATH), fill.c is_sorted.c print.c pushes.c \
+		reverse_rotates.c rotates.c stack_operations.c \
+		swaps.c)
 
 OBJ1 = $(patsubst %.c, %.o, $(FILES1))
 OBJ2 = $(patsubst %.c, %.o, $(FILES2))
 OBJ3 = $(patsubst %.c, %.o, $(FILES3))
 CFLAGS	=  -Wall -Werror -Wextra
-HEADER		= includes/both.h includes/push_swap.h includes/checker.h
+HEADER		= $(addprefix $(INCLUDES_PATH), both.h push_swap.h checker.h)
 NAME 		= $(NAME1) $(NAME2)
+MAKE		= cd $(LIBFT_PATH) && make
 
 all: $(NAME)
 
 $(LIBFT):
-	$(MAKE) -sC libft all
+	@$(MAKE) all && cd ../
+	@echo libft compiled
 
 $(NAME1): $(OBJ1) $(OBJ3)
 	@gcc $(CFLAGS) -o $(NAME1) $(OBJ1) $(OBJ3) $(LIBFT)
@@ -35,11 +51,11 @@ $(NAME2): $(OBJ2) $(OBJ3)
 	@gcc -I . $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJ1) $(OBJ2) $(OBJ3) && $(MAKE) clean -C ./libft
+	@rm -f $(OBJ1) $(OBJ2) $(OBJ3) && $(MAKE) clean && cd ../
 
 fclean:
-	@rm -f $(OBJ1) $(OBJ2) $(OBJ3) && $(MAKE) clean -C ./libft
-	@rm -f $(NAME1) $(NAME2) && $(MAKE) fclean -C ./libft
+	@rm -f $(OBJ1) $(OBJ2) $(OBJ3) && $(MAKE) clean && cd ../
+	@rm -f $(NAME1) $(NAME2) && $(MAKE) fclean  && cd ../
 
 re: fclean all
 

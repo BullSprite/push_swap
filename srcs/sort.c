@@ -91,7 +91,7 @@ void	drop(t_workspace *ws, int len, int name, int pivot)
 	rot_count = 0;
 	while (++i < len)
 	{
-		if (!name ? (*(ws->a))->num <= pivot : (*(ws->b))->num >= pivot)
+		if (!name ? (*(ws->a))->num < pivot : (*(ws->b))->num >= pivot)
 		{
 			if (!name)
 				push_to_b(ws, 1);
